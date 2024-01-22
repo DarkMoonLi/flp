@@ -32,21 +32,25 @@ Subtask1.hs
 -------------------------------------------------
 module Subtask1 where
   getCharB list = head (tail list)
+  
 -------------------------------------------------
 Subtask2.hs
 -------------------------------------------------
 module Subtask2 where
   getCharB list = tail (head list)
+  
 -------------------------------------------------
 Subtask3.hs
 -------------------------------------------------
 module Subtask3 where
   getCharB list = tail (head (tail list))
+  
 -------------------------------------------------
 Subtask4.hs
 -------------------------------------------------
 module Subtask4 where
   getCharB list = head (head (tail list))
+  
 -------------------------------------------------
 ![Alt text](task2/image-1.png)
 
@@ -76,6 +80,7 @@ main = do
   if startElement `mod` 2 == 1
     then print (ONL.oddNaturalListWithIterating startElement numberElement list)
     else print (ONL.oddNaturalListWithIterating (startElement + 1) numberElement list)
+    
 -------------------------------------------------
 OddNaturalList.hs
 -------------------------------------------------
@@ -116,6 +121,7 @@ main = do
 
   putStrLn "Список треугольных чисел Ферма:"
   print (TN.getTrianglesNumberWithLimit startElement numberElements list)
+  
 -------------------------------------------------
 TrianglesNumber.hs
 -------------------------------------------------
@@ -144,6 +150,7 @@ main = do
 
   putStrLn "Список квадратных пирамидальных чисел Ферма:"
   print (SPN.getSquarePyramidNumbersWithLimit startElement numberElements list)
+  
 -------------------------------------------------
 SquarePyramidNumbers.hs
 -------------------------------------------------
