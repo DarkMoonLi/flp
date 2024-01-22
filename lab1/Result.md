@@ -1,8 +1,10 @@
 1) Используя функции fst (возвращает первый элемент кортежа)  и snd (возвращвет второй элемент кортежа из 2 элементов)  из стандартного модуля Prelude чтобы "достать" значение типа Char из кортежа (( 1, 'a'), "abc")
+Main.hs
+-------------------------------------------------
 main = do
-let inputCortege = ((1, 'a'), "abc")
-let getChar cortege = snd (fst cortege)
-print (getChar inputCortege)
+  let inputCortege = ((1, 'a'), "abc")
+  let getChar cortege = snd (fst cortege)
+  print (getChar inputCortege)
 
 ![Alt text](task1/image.png)
 
