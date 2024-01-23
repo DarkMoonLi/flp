@@ -3,7 +3,7 @@ module Main where
 import qualified SquarePyramidNumbers as SPN
 
 main = do
-  let startElement = 0
+  let startElement = 1
   let numberElements = 50
   let list = []
 

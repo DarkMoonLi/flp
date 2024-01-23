@@ -48,7 +48,7 @@ Subtask4.hs
 module Subtask4 where
   getCharB list = head (head (tail list))
 -------------------------------------------------
-![Alt text](task2/image-1.png)
+![Alt text](task2/image.png)
 
 3) Список нечётных натуральных чисел.  Количество чисел в списке = 20. (не менее 3 способа)
 Main.hs
@@ -110,7 +110,7 @@ module Main where
 import qualified TrianglesNumber as TN
 
 main = do
-  let startElement = 0
+  let startElement = 1
   let numberElements = 50
   let list = []
 
@@ -138,7 +138,7 @@ module Main where
 import qualified SquarePyramidNumbers as SPN
 
 main = do
-  let startElement = 0
+  let startElement = 1
   let numberElements = 50
   let list = []
 

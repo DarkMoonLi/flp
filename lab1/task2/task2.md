@@ -27,16 +27,16 @@ module Subtask1 where
 Subtask2.hs
 -------------------------------------------------
 module Subtask2 where
-  getCharB list = tail (head list)
+  getCharB list = head (tail (head list))
 -------------------------------------------------
 Subtask3.hs
 -------------------------------------------------
 module Subtask3 where
-  getCharB list = tail (head (tail list))
+  getCharB list = head( tail (head (tail list)))
 -------------------------------------------------
 Subtask4.hs
 -------------------------------------------------
 module Subtask4 where
   getCharB list = head (head (tail list))
 -------------------------------------------------
-![Alt text](image-1.png)
+![Alt text](image.png)
