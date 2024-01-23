@@ -1,14 +1,21 @@
 1) Используя функции fst (возвращает первый элемент кортежа)  и snd (возвращвет второй элемент кортежа из 2 элементов)  из стандартного модуля Prelude чтобы "достать" значение типа Char из кортежа (( 1, 'a'), "abc")
+-------------------------------------------------
+Main.hs
+-------------------------------------------------
+```
 main = do
-let inputCortege = ((1, 'a'), "abc")
-let getChar cortege = snd (fst cortege)
-print (getChar inputCortege)
+  let inputCortege = ((1, 'a'), "abc")
+  let getChar cortege = snd (fst cortege)
+  print (getChar inputCortege)
+```
 
 ![Alt text](task1/image.png)
 
 2) Используя функции head и tail  получить элемент b из списков
+-------------------------------------------------
 Main.hs
 -------------------------------------------------
+```
 module Main where
 import qualified Subtask1 as ST1
 import qualified Subtask2 as ST2
@@ -27,32 +34,43 @@ main = do
 
   let inputList4 = [['a','d'], ['b', 'c']]
   print (ST4.getCharB inputList4)
+```
 -------------------------------------------------
 Subtask1.hs
 -------------------------------------------------
+```
 module Subtask1 where
   getCharB list = head (tail list)
+```
 -------------------------------------------------
 Subtask2.hs
 -------------------------------------------------
+```
 module Subtask2 where
   getCharB list = tail (head list)
+```
 -------------------------------------------------
 Subtask3.hs
 -------------------------------------------------
+```
 module Subtask3 where
   getCharB list = tail (head (tail list))
+```
 -------------------------------------------------
 Subtask4.hs
 -------------------------------------------------
+```
 module Subtask4 where
   getCharB list = head (head (tail list))
+```
 -------------------------------------------------
 ![Alt text](task2/image.png)
 
 3) Список нечётных натуральных чисел.  Количество чисел в списке = 20. (не менее 3 способа)
+-------------------------------------------------
 Main.hs
 -------------------------------------------------
+```
 module Main where
 
 import qualified OddNaturalList as ONL
@@ -76,9 +94,11 @@ main = do
   if startElement `mod` 2 == 1
     then print (ONL.oddNaturalListWithIterating startElement numberElement list)
     else print (ONL.oddNaturalListWithIterating (startElement + 1) numberElement list)
+```
 -------------------------------------------------
 OddNaturalList.hs
 -------------------------------------------------
+```
 module OddNaturalList where
 
 oddNaturalListWithRecursive :: Int -> Int -> [Int]
@@ -99,12 +119,15 @@ oddNaturalListWithIterating startElement numberElement emptyList =
     if numberElement > 0 then
       oddNaturalListWithIterating (startElement + 1) (numberElement) emptyList
     else []
+```
 -------------------------------------------------
 ![Alt text](task3/image-1.png)
 
 4) Список треугольных чисел Ферма. Колво чисел = 50.
+-------------------------------------------------
 Main.hs
 -------------------------------------------------
+```
 module Main where
 
 import qualified TrianglesNumber as TN
@@ -116,9 +139,11 @@ main = do
 
   putStrLn "Список треугольных чисел Ферма:"
   print (TN.getTrianglesNumberWithLimit startElement numberElements list)
+```
 -------------------------------------------------
 TrianglesNumber.hs
 -------------------------------------------------
+```
 module TrianglesNumber where
 
 getTrianglesNumberWithLimit :: Int -> Int -> [Int] -> [Int]
@@ -127,12 +152,15 @@ getTrianglesNumberWithLimit startElement numberElements list =
     list ++ [startElement * (startElement + 1) `div` 2] ++ getTrianglesNumberWithLimit (startElement + 1) (numberElements - 1) list
   else 
     []
+```
 -------------------------------------------------
 ![Alt text](task4/image.png)
 
 5) Список пирамидальных чисел Ферма. Колво чисел = 50
+-------------------------------------------------
 Main.hs
 -------------------------------------------------
+```
 module Main where
 
 import qualified SquarePyramidNumbers as SPN
@@ -144,9 +172,11 @@ main = do
 
   putStrLn "Список квадратных пирамидальных чисел Ферма:"
   print (SPN.getSquarePyramidNumbersWithLimit startElement numberElements list)
+```
 -------------------------------------------------
 SquarePyramidNumbers.hs
 -------------------------------------------------
+```
 module SquarePyramidNumbers where
 
 getSquarePyramidNumbersWithLimit :: Int -> Int -> [Int] -> [Int]
@@ -155,5 +185,6 @@ getSquarePyramidNumbersWithLimit startElement numberElements list =
     list ++ [startElement * (startElement + 1) * (2 * startElement + 1) `div` 6] ++ getSquarePyramidNumbersWithLimit (startElement + 1) (numberElements - 1) list
   else 
     []
+```
 -------------------------------------------------
 ![Alt text](task5/image.png)
