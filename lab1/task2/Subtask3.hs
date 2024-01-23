@@ -1,2 +1,2 @@
 module Subtask3 where
-  getCharB list = tail (head (tail list))
+  getCharB list = head( tail (head (tail list)))

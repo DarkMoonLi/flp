@@ -47,14 +47,14 @@ Subtask2.hs
 -------------------------------------------------
 ```
 module Subtask2 where
-  getCharB list = tail (head list)
+  getCharB list = head (tail (head list))
 ```
 -------------------------------------------------
 Subtask3.hs
 -------------------------------------------------
 ```
 module Subtask3 where
-  getCharB list = tail (head (tail list))
+  getCharB list = head( tail (head (tail list)))
 ```
 -------------------------------------------------
 Subtask4.hs
