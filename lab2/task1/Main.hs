@@ -3,12 +3,12 @@ module Main where
 import qualified SheetFunctions as SF
 
 main = do
-  let listIntOdd = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-  let listIntEven = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  let listStringOdd = ["1", "2", "3", "4", "5"]
-  let listStringEven = ["1", "2", "3", "4", "5", "6"]
-  let listCharOdd = ['1', '2', '3', '4', '5']
-  let listCharEven = ['1', '2', '3', '4', '5', '6']
+  let listIntOdd = [1, 2, 3, 4, 5, 6, 7, 8, 9] :: [Int]
+  let listIntEven = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] :: [Int]
+  let listStringOdd = ["1", "2", "3", "4", "5"] :: [String]
+  let listStringEven = ["1", "2", "3", "4", "5", "6"] :: [String]
+  let listCharOdd = ['1', '2', '3', '4', '5'] :: [Char]
+  let listCharEven = [] :: [Int]
 
   putStrLn "Список целых элементов, где соседние элементы поменялись местами:"
   print (SF.oddEven listIntOdd)

@@ -1,5 +1,6 @@
 module Main where
 
+import Control.Exception
 import qualified SheetFunctions as SF
 
 main = do
@@ -13,5 +14,5 @@ main = do
   putStrLn "Список строковых элементов, со вставленной '17' на 6 позицию:"
   print (SF.insert listStringOdd "17" 6)
 
-  putStrLn "Список элементов, со вставленной 'f' на 13 позицию:"
-  print (SF.insert listCharOdd 'f' 13)
+  putStrLn "Список элементов, со вставленной 'f' на -1 позицию:"
+  print (SF.insert listCharOdd 'f' (-1))

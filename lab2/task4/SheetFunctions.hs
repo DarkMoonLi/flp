@@ -1,9 +1,10 @@
 module SheetFunctions where
 
-position :: [a] -> a -> Integer
+position :: (Eq a) => [a] -> a -> Int
 position l a = positionN a l 0
 
-positionN :: a -> [a] -> Integer -> Integer
-positionN j (a:t) n = (n + 1)
-positionN a (h:t) n = positionN a t (n+1)
-positionN a [] n = 0
+positionN :: (Eq a) => a -> [a] -> Int -> Int
+positionN a l n
+  | n > (length l - 1) = error "Not found"
+  | a == (l !! n) = n
+  | a /= (l !! n) = positionN a l (n + 1)

@@ -1,6 +1,4 @@
 module SheetFunctions where
 
-sumFormule :: Int -> Int -> Int
-sumFormule n i
-  | i <= n = i * n + sumFormule n (i + 1)
-  | otherwise = 0
+sumFormule :: Int -> Int
+sumFormule n = sum[1..n]
