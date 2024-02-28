@@ -1,12 +1,14 @@
-main :: IO ()
+module Main where
+
+import qualified Lab5
+
 main = do
-  putStrLn "Введите начальное число:"
-  start <- readLn :: IO Int
-  putStrLn "Введите количество чисел:"
-  count <- readLn :: IO Int
-  putStrLn "Введите шаг:"
-  step  <- readLn :: IO Int
-
-  let list = take count $ iterate (+ step) start
-
-  print list
+    putStrLn "Введите начальное значение:"
+    initial <- readLn
+    putStrLn "Введите количество элементов:"
+    num <- readLn
+    putStrLn "Введите крастность:"
+    factor <- readLn
+    let result = Lab5.generateList initial num factor
+    putStrLn "Сгенерированный список:"
+    print result
